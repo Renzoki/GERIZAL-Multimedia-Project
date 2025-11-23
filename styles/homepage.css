@@ -1,0 +1,152 @@
+:root {
+    --bg: #FAF7F2;
+    --text: #3C2F2F;
+    --accent: #8B6F47;
+    --light: #F0E6DC;
+    --border: #D4C4B0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Libre Baskerville', serif;
+    line-height: 1.8;
+    font-size: 18px;
+}
+
+header {
+    padding: 1rem 5%;
+    border-bottom: 1px solid var(--border);
+    background: var(--bg);
+}
+
+nav {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+.nav-links a {
+    margin-left: 3rem;
+    color: var(--text);
+    text-decoration: none;
+    font-size: 1.1rem;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+.nav-links a:hover {
+    opacity: 1;
+}
+
+main {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.hero {
+    text-align: center;
+    padding: 4rem 0 6rem;
+}
+
+.hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 4.5rem;
+    margin-bottom: 1rem;
+    color: var(--text);
+}
+
+.hero .subtitle {
+    font-size: 1.4rem;
+    color: var(--accent);
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 2rem;
+}
+
+.hero p {
+    max-width: 680px;
+    margin: 0 auto 3rem;
+    font-size: 1.25rem;
+    opacity: 0.88;
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.9rem 2.4rem;
+    border: 1.5px solid var(--accent);
+    color: var(--accent);
+    text-decoration: none;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    transition: all 0.3s;
+}
+
+.btn:hover {
+    background: var(--accent);
+    color: var(--bg);
+}
+
+.section {
+    padding: 6rem 0;
+    border-top: 1px solid var(--border);
+    text-align: center;
+}
+
+.section h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.4rem;
+    margin-bottom: 3rem;
+    color: var(--text);
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: center;
+}
+
+.card {
+    flex: 1;
+    min-width: 260px;
+    max-width: 300px;
+    background: var(--light);
+    padding: 2rem;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.card h3 {
+    font-family: 'cormorant Garamond', serif;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    color: var(--accent);
+}
+
+footer {
+    text-align: center;
+    padding: 4rem 5%;
+    color: var(--text);
+    opacity: 0.7;
+    font-size: 0.95rem;
+    border-top: 1px solid var(--border);
+    margin-top: 6rem;
+}
