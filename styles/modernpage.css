@@ -12,6 +12,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     background: var(--bg);
     color: var(--text);
@@ -20,6 +24,7 @@ body {
     font-size: 18px;
 }
 
+/* HEADER */
 header {
     padding: 1rem 5%;
     border-bottom: 1px solid var(--border);
@@ -56,10 +61,23 @@ nav {
     opacity: 1;
 }
 
-/* --- HERO SECTION --- */
+/* HERO SECTION */
 .hero {
     text-align: center;
     padding: 6rem 10% 4rem;
+    background: linear-gradient(135deg, #f6eee3, #ffffff, #f6eee3);
+    background-size: 300%;
+    animation: heroShift 10s infinite alternate;
+}
+
+@keyframes heroShift {
+    0% {
+        background-position: left;
+    }
+
+    100% {
+        background-position: right;
+    }
 }
 
 .hero h1 {
@@ -75,7 +93,7 @@ nav {
     font-size: 1.1rem;
 }
 
-/* --- GENERIC SECTION STYLE --- */
+/* GENERIC SECTION */
 .section {
     padding: 4rem 10%;
     max-width: 1100px;
@@ -93,7 +111,7 @@ nav {
     opacity: 0.85;
 }
 
-/* --- INFO CARDS --- */
+/* INFO CARDS */
 .cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -109,7 +127,7 @@ nav {
 }
 
 .card:hover {
-    transform: translateY(-4px);
+    transform: translateY(-6px);
 }
 
 .card h3 {
@@ -117,7 +135,7 @@ nav {
     margin-bottom: 0.7rem;
 }
 
-
+/* GALLERY */
 .gallery {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -129,9 +147,34 @@ nav {
     border-radius: 4px;
     border: 1px solid var(--border);
     object-fit: cover;
+    transition: 0.4s ease;
 }
 
-/* --- COMPARISON SECTION --- */
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+/* LIGHTBOX */
+.lightbox {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.lightbox img {
+    max-width: 90%;
+    max-height: 90%;
+    border-radius: 8px;
+}
+
+/* COMPARISON SECTION */
 .comparison-box {
     display: flex;
     gap: 3rem;
@@ -157,6 +200,17 @@ nav {
     padding-left: 1.2rem;
 }
 
+.expand span {
+    display: none;
+    color: var(--accent);
+    font-style: italic;
+}
+
+.expand:hover span {
+    display: inline;
+}
+
+/* SUMMARY */
 .summary {
     margin-top: 2rem;
     font-style: italic;
@@ -164,6 +218,7 @@ nav {
     opacity: 0.8;
 }
 
+/* FOOTER */
 footer {
     text-align: center;
     padding: 4rem 5%;
@@ -172,4 +227,35 @@ footer {
     font-size: 0.95rem;
     border-top: 1px solid var(--border);
     margin-top: 6rem;
+}
+
+/* SCROLL REVEAL */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: 0.8s ease;
+}
+
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* TOP BUTTON */
+#topBtn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    padding: 0.6rem 1rem;
+    background: var(--accent);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    display: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+#topBtn:hover {
+    background: var(--text);
 }

@@ -17,7 +17,7 @@
             <a href="homepage.html" class="logo">Ang Tinig ng Bayan</a>
             <div class="nav-links">
                 <a href="timelinepage.html">Timeline & Protests</a>
-                <a href="modernpage.html">Modern Activisim</a>
+                <a href="modernpage.html">Modern Activism</a>
                 <a href="reflectionpage.html">Reflections</a>
                 <a href="aboutpage.html">About Us</a>
             </div>
@@ -26,90 +26,99 @@
 
     <main>
         <!-- HERO SECTION -->
-        <section class="hero">
+        <section class="hero reveal">
             <h1>Modern Filipino Activism</h1>
-            <p>How today’s generation continues the long legacy of civic participation inspired by José Rizal.</p>
+            <p>How today’s generation continues the legacy of civic participation inspired by José Rizal.</p>
         </section>
-
+        
         <!-- PRESENT-DAY CIVIC PARTICIPATION -->
-        <section class="section">
+        <section class="section reveal">
             <h2>Present-Day Forms of Civic Participation</h2>
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Facere id nostrum nihil eius! Iste natus
-                maiores veniam temporibus minima cum animi necessitatibus eius? Soluta nobis earum amet ipsa repellat
-                aperiam!
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto amet magni distinctio asperiores quod molestiae, quaerat maxime repellendus soluta deleniti deserunt laudantium vitae nihil voluptas ab doloribus id dicta repudiandae!
             </p>
 
             <div class="cards">
-                <div class="card">
+                <div class="card reveal">
                     <h3>Digital Activism</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus dolor magni excepturi atque
-                        voluptatum! Pariatur illum doloribus quasi harum libero officia cupiditate commodi cum illo,
-                        repellat tenetur ratione earum. Nulla..</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 </div>
 
-                <div class="card">
+                <div class="card reveal">
                     <h3>Campus & Youth Movements</h3>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quos assumenda officia, tempore
-                        architecto, obcaecati fuga repudiandae sed omnis nesciunt dolor debitis, in qui nulla deleniti
-                        praesentium. Tempore maxime libero reiciendis?.</p>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde odio voluptate porro dolorum, nemo in, laborum mollitia earum sit quidem enim quia molestiae veniam, aliquid voluptates optio nobis tenetur. Quaerat!</p>
                 </div>
 
-                <div class="card">
+                <div class="card reveal">
                     <h3>Community-Based Advocacy</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae sint velit ullam unde mollitia aut
-                        aspernatur architecto dolorum accusamus, ipsam at commodi! Nesciunt adipisci incidunt, fugit
-                        iure enim est sint?</p>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 </div>
             </div>
         </section>
 
         <!-- TODAY’S PROTESTS GALLERY -->
-        <section class="section">
+        <section class="section reveal">
             <h2>Today's Protests & Youth Involvement</h2>
             <p>
-                Young Filipinos continue to take an active role in calling out injustices, defending democratic rights,
-                and promoting accountability. Below are glimpses of recent mobilizations.
+                Young Filipinos continue to call out injustices, defend democratic rights, and mobilize for a more
+                accountable society.
             </p>
 
             <div class="gallery">
                 <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
-                <img src="" alt="">
             </div>
         </section>
 
+        <!-- Lightbox Viewer -->
+        <div id="lightbox" class="lightbox">
+            <img id="lightbox-img" src="" alt="">
+        </div>
+
         <!-- COMPARISON SECTION -->
-        <section class="section comparison">
+        <section class="section comparison reveal">
             <h2>Rizal’s Era Activism vs. Modern Activism</h2>
+
             <div class="comparison-box">
                 <div class="col">
                     <h3>Rizal’s Era</h3>
                     <ul>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
+                        <li class="expand">Written Propaganda →
+                            <span>Rizal used literature to peacefully expose injustice.</span>
+                        </li>
+                        <li class="expand">Reformist Approach →
+                            <span>Focus on institutional and legal reforms under colonial rule.</span>
+                        </li>
+                        <li class="expand">Limited Technology →
+                            <span>Ideas spread slowly through print and word of mouth.</span>
+                        </li>
+                        <li class="expand">National Identity Formation →
+                            <span>His works solidified early Filipino consciousness.</span>
+                        </li>
                     </ul>
                 </div>
 
                 <div class="col">
                     <h3>Modern Activism</h3>
                     <ul>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                        <li></li>
+                        <li class="expand">Digital Mobilization →
+                            <span>Movements spread instantly through social media.</span>
+                        </li>
+                        <li class="expand">Youth-Led Movements →
+                            <span>Students and young professionals lead national conversations.</span>
+                        </li>
+                        <li class="expand">Grassroots Advocacy →
+                            <span>Community-centered activism aiming at local empowerment.</span>
+                        </li>
+                        <li class="expand">Global Awareness →
+                            <span>Modern activists connect local issues to global struggles.</span>
+                        </li>
                     </ul>
                 </div>
             </div>
 
             <p class="summary">
-                Although they differ in form, both eras share the same core: a deep love for the nation
-                and the courage to challenge injustice.
+                Though their forms differ, both eras are driven by the same spirit: love of country and the courage to
+                challenge injustice.
             </p>
         </section>
     </main>
@@ -118,6 +127,45 @@
         A living tribute to José Rizal and every Filipino who raised their voice for justice.<br>
         Inspired by the power of collective action — past, present, and future.
     </footer>
+
+    <!-- Scroll to Top Button -->
+    <button id="topBtn">↑</button>
+
+    <script>
+        // Scroll reveal animation
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) entry.target.classList.add("show");
+            });
+        });
+
+        document.querySelectorAll(".reveal").forEach(el => observer.observe(el));
+
+
+        // Lightbox
+        const lightbox = document.getElementById("lightbox");
+        const lightboxImg = document.getElementById("lightbox-img");
+
+        document.querySelectorAll(".gallery img").forEach(img => {
+            img.addEventListener("click", () => {
+                lightboxImg.src = img.src;
+                lightbox.style.display = "flex";
+            });
+        });
+
+        lightbox.addEventListener("click", () => {
+            lightbox.style.display = "none";
+        });
+
+        // Scroll to top button
+        const topBtn = document.getElementById("topBtn");
+
+        window.addEventListener("scroll", () => {
+            topBtn.style.display = window.scrollY > 300 ? "block" : "none";
+        });
+
+        topBtn.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+    </script>
 </body>
 
 </html>
