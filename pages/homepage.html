@@ -31,7 +31,7 @@
       <div class="subtitle">From Rizal to the Present</div>
       <p>An interactive journey through Philippine protests that changed unjust laws — showing how one voice, multiplied
         by many, has always shaped freedom and justice in our nation.</p>
-      <a href="#" class="btn">Explore the Timeline</a>
+      <a href="timelinepage.html" class="btn" id="explore-btn">Explore the Timeline</a>
     </section>
 
     <section class="section">
@@ -63,6 +63,38 @@
     A living tribute to José Rizal and every Filipino who raised their voice for justice.<br>
     Inspired by the power of collective action — past, present, and future.
   </footer>
+
+  <!-- Back to Top Button -->
+  <button id="topBtn">↑</button>
+
+  <!-- Scripts -->
+  <script>
+    // Explore Button Scroll
+    document.getElementById('explore-btn').addEventListener('click', function(e) {
+      e.preventDefault();
+      window.location.href = "timelinepage.html";
+    });
+
+    // Reveal cards on scroll
+    const cards = document.querySelectorAll('.card');
+    const revealCards = () => {
+      const windowHeight = window.innerHeight;
+      cards.forEach(card => {
+        const top = card.getBoundingClientRect().top;
+        if (top < windowHeight - 100) {
+          card.classList.add('active');
+        }
+      });
+    };
+    window.addEventListener('scroll', revealCards);
+
+    // Back to Top Button
+    const topBtn = document.getElementById('topBtn');
+    window.onscroll = function() {
+      topBtn.style.display = (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) ? "block" : "none";
+    };
+    topBtn.onclick = () => window.scrollTo({top: 0, behavior: 'smooth'});
+  </script>
 
 </body>
 
