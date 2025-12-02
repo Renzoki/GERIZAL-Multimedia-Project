@@ -66,31 +66,70 @@
             </div>
         </section>
 
-        <!-- REFERENCES SECTION -->
         <section class="section">
             <h2 class="section-title">References</h2>
 
-            <h3 class="ref-subtitle">Text & Academic Sources</h3>
-            <div class="references-box">
-                <ol class="ref-list">
-                    <li></li>
-                </ol>
+            <div class="ref-dropdown">
+                <button class="ref-btn">Test & Dynamic Sources ▾</button>
+                <div class="ref-content">
+                    <ol class="ref-list">
+                        <li>Rizal, J. (1887/2011). Noli Me Tángere (L. Guerrero, Trans.). Guerrero Publishing.</li>
+                        <li>Rizal, J. (1891/2007). El Filibusterismo (L. Guerrero, Trans.). Guerrero Publishing.</li>
+                        <li>Rizal, J. (1890/2008). The Philippines a Century Hence. Fili Books.</li>
+                        <li>Rizal, J. (1896/1996). Mi Último Adiós. National Historical Institute.</li>
+                        <li>Quezon, M. L., III. (2007, January 22). The explainer: EDSA Dos in retrospect – Manuel L. Quezon III. https://www.quezon.ph/2007/01/22/the-explainer-edsa-dos-in-retrospect/</li>
+                    </ol>
+                </div>
             </div>
 
-            <h3 class="ref-subtitle">Image References</h3>
-            <div class="references-box">
-                <ol class="ref-list">
-                    <li></li>
-                </ol>
+            <div class="ref-dropdown">
+                <button class="ref-btn">Image Sources ▾</button>
+                <div class="ref-content">
+                    <ol class="ref-list">
+                        <li>https://www.facebook.com/share/1Gxxj6ZrFc/?mibextid=wwXIfr</li>
+                        <li>https://www.facebook.com/share/1CZTXPA2JS/?mibextid=wwXIfr</li>
+                        <li>https://www.facebook.com/share/1Cxzco8WYR/?mibextid=wwXIfr</li>
+                        <li>https://www.bayaniart.com/la-solidaridad/</li>
+                        <li>https://www.pinterest.com/pin/45880489948178527/</li>
+                        <li>https://www.pinterest.com/pin/noli-me-tangere-vintage-book-cover--33214115996116276/</li>
+                        <li>https://en.wikipedia.org/wiki/Jos%C3%A9_Rizal</li>
+                        <li>https://naquem.blogspot.com/2015/06/propaganda-in-quest-of-philippine.html</li>
+                        <li>https://ph.pinterest.com/pin/talambuhay--8092474308609002/</li>
+                        <li>https://philippinefolklifemuseum.org/portfolio-items/andres-bonifacio/attachment/bonifacio-cry_of_pugadlawin-1896/</li>
+                        <li>https://www.onenews.ph/articles/edsa-1986-memories-of-a-young-reporter</li>
+                        <li>https://celestialmeadows.net/the-filipinos-and-edsa-revolution/</li>
+                        <li>https://maritimereview.ph/the-three-shining-moments-of-philippine-history/</li>
+                        <li>https://alchetron.com/Second-EDSA-Revolution</li>
+                        <li>https://xiaochua.net/2021/01/</li>
+                        <li>https://verafiles.org/articles/marcos-and-first-quarter-storm-part-ii-pillboxes-and-firearm</li>
+                        <li>https://www.esquiremag.ph/long-reads/features/first-quarter-storm-a2212-20200224-lfrm</li>
+                        <li>https://www.josephscalice.com/fqs</li>
+                    </ol>
+                </div>
             </div>
         </section>
-
     </main>
 
     <footer>
         A living tribute to José Rizal and every Filipino who raised their voice for justice.<br>
         Inspired by the power of collective action — past, present, and future.
     </footer>
+
+    <script>
+        const refButtons = document.querySelectorAll('.ref-btn');
+
+        refButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const content = button.nextElementSibling;
+                content.classList.toggle('open');
+
+                // Optionally rotate the arrow
+                button.textContent = button.textContent.includes('▾') 
+                    ? button.textContent.replace('▾', '▴') 
+                    : button.textContent.replace('▴', '▾');
+            });
+        });
+    </script>
 </body>
 
 </html>

@@ -528,3 +528,22 @@ footer {
     opacity: 1;
     transform: translateX(0) translateY(0);
 }
+
+/* TOP BUTTON */
+#topBtn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    padding: 0.6rem 1rem;
+    background: var(--accent);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    display: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+#topBtn:hover {
+    background: var(--text);
+}

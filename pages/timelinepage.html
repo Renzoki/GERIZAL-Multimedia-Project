@@ -249,6 +249,8 @@
         Inspired by the power of collective action — past, present, and future.
     </footer>
 
+    <button id="topBtn">↑</button>
+
     <script>
         // Scroll Reveal Animations
         const faders = document.querySelectorAll('.fade-up, .fade-in, .fade-left, .fade-right, .fade-up-delay, .fade-up-delay-2, .fade-up-delay-3');
@@ -272,6 +274,14 @@
         faders.forEach(fader => {
             appearOnScroll.observe(fader);
         });
+
+        const topBtn = document.getElementById("topBtn");
+
+        window.addEventListener("scroll", () => {
+            topBtn.style.display = window.scrollY > 300 ? "block" : "none";
+        });
+
+        topBtn.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
     </script>
 </body>
 </html>
