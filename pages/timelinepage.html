@@ -254,12 +254,10 @@
     <script>
         // Scroll Reveal Animations
         const faders = document.querySelectorAll('.fade-up, .fade-in, .fade-left, .fade-right, .fade-up-delay, .fade-up-delay-2, .fade-up-delay-3');
-
         const appearOptions = {
             threshold: 0.2,
             rootMargin: "0px 0px -50px 0px"
         };
-
         const appearOnScroll = new IntersectionObserver(function(entries, appearOnScroll) {
             entries.forEach(entry => {
                 if (!entry.isIntersecting) {
@@ -270,17 +268,14 @@
                 }
             });
         }, appearOptions);
-
         faders.forEach(fader => {
             appearOnScroll.observe(fader);
         });
 
         const topBtn = document.getElementById("topBtn");
-
         window.addEventListener("scroll", () => {
             topBtn.style.display = window.scrollY > 300 ? "block" : "none";
         });
-
         topBtn.onclick = () => window.scrollTo({ top: 0, behavior: 'smooth' });
     </script>
 </body>
