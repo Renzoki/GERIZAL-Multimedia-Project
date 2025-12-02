@@ -401,6 +401,53 @@ footer {
     margin-bottom: 1.5rem;
 }
 
+.rizal-expanded {
+    margin-top: 2rem;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.rizal-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1.5rem 1.8rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.rizal-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+}
+
+.rizal-card h3 {
+    color: var(--accent);
+    margin-bottom: 0.8rem;
+    font-size: 1.3rem;
+}
+
+.rizal-card p {
+    margin-bottom: 1rem;
+    line-height: 1.65;
+}
+
+.rizal-quote-block {
+    background: var(--light);
+    padding: 1rem 1.2rem;
+    border-left: 4px solid var(--accent);
+    margin: 1rem 0;
+    font-style: italic;
+    border-radius: 6px;
+}
+
+.rizal-quote-block cite {
+    font-weight: 600;
+    color: var(--accent);
+    font-style: normal;
+}
+
 .reform-section {
     padding: 8rem 5% 10rem;
     background: var(--bg);
@@ -460,31 +507,6 @@ footer {
     font-size: 1.15rem;
     line-height: 1.8;
     opacity: 0.88;
-}
-
-body {
-    font-size: 17px;               
-}
-
-.rizal-text p,
-.reform-card p,
-.timeline-card p {
-    font-size: 1.1rem;             
-    line-height: 1.85;
-    opacity: 0.88;
-    margin-bottom: 1.2rem;
-}
-
-.rizal-quote p {
-    font-size: 1.45rem;            
-}
-
-.timeline-card h3 {
-    font-size: 1.75rem;           
-}
-
-.reform-card h3 {
-    font-size:1.85rem;
 }
 
 /* Scroll Reveal Effects */
