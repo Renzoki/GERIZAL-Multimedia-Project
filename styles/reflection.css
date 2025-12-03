@@ -87,6 +87,7 @@ nav {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 2rem;
+    align-items: start; 
 }
 
 /* --- REFLECTION CARDS --- */
@@ -129,4 +130,43 @@ footer {
     font-size: 0.95rem;
     border-top: 1px solid var(--border);
     margin-top: 6rem;
+}
+
+.ref-dropdown {
+    margin-bottom: 1.5rem;
+    border-radius: 6px;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    background: var(--light);
+    display: flex;
+    flex-direction: column;
+}
+
+.ref-btn {
+    width: 100%;
+    text-align: left;
+    padding: 1rem 1.2rem;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    background: var(--light);
+    border: none;
+    cursor: pointer;
+    outline: none;
+    transition: background 0.3s;
+}
+
+.ref-btn:hover {
+    background: var(--bg);
+}
+
+.ref-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease, padding 0.35s ease;
+    padding: 0 1.2rem;
+}
+
+.ref-content.open {
+    padding: 1rem 1.2rem; 
+    max-height: 1000px;
 }
